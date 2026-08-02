@@ -27,9 +27,21 @@ scripts/verify-esm.ts
 
 ## Remotes
 
-- `origin` — `https://git.ch5.me/ch5/ch5-labs.git` (authoritative, work happens here)
-- GitHub — public, **read-only mirror**. Do not develop there; PRs opened against it get
-  closed with a pointer back here.
+- `origin` — `https://git.ch5.me/ch5/ch5-labs.git` (authoritative, private, work happens here)
+- `github` — `https://github.com/hassoncs/ch5-labs.git`, public, **read-only mirror**. Do not
+  develop there; PRs opened against it get closed with a pointer back here.
+
+The mirror is **pushed by hand today**:
+
+```bash
+git push origin main && git push github main
+```
+
+It is not a Forgejo push-mirror yet, because that stores a GitHub PAT inside Forgejo and
+the only token on hand carries `repo` scope over every one of Chris's repos. Wiring it
+automatically needs a fine-grained PAT scoped to `hassoncs/ch5-labs` alone. Until that
+exists, assume the mirror is stale unless you just pushed it — do not cite the GitHub
+copy as proof of anything.
 
 ## Commands
 

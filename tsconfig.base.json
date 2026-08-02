@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "target": "ES2022",
+    // DOM, deliberately no "node". Packages here must run in a browser, so the
+    // absence of @types/node is the compile-time half of the browser-safe rule:
+    // `import { readFile } from "node:fs"` fails typecheck instead of failing
+    // later, silently, as a /node/*.mjs shim in the esm.sh build.
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmitOnError": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@chriscode/labs-template",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Copy this folder to start a new experiment. Flip private to false when it is ready to publish.",
+  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

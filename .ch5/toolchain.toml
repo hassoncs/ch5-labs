@@ -1,0 +1,21 @@
+schemaVersion = 1
+
+[repo]
+id = "ch5-labs"
+kind = "node-lib"
+packageManager = "bun"
+lockfiles = ["bun.lock", "package.json"]
+
+[[verify]]
+name = "repository structure: package.json"
+command = "test -f package.json"
+
+[[verify]]
+name = "no publishConfig.registry override (would hide packages from esm.sh)"
+command = "! grep -rl '\"registry\"' packages/*/package.json"
+
+[deps]
+install = "bun install"
+
+[warm]
+command = "bun install"

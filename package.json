@@ -1,0 +1,22 @@
+{
+  "name": "ch5-labs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tiny static TypeScript library experiments, published to public npm so esm.sh can serve them.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.ch5.me/ch5/ch5-labs.git"
+  },
+  "license": "MIT",
+  "packageManager": "bun@1.3.14",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "bun run --filter '*' build",
+    "typecheck": "bun run --filter '*' typecheck",
+    "verify:esm": "bun run scripts/verify-esm.ts"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "ch5-labs",
+      "devDependencies": {
+        "typescript": "^6.0.3",
+      },
+    },
+    "packages/template": {
+      "name": "@chriscode/labs-template",
+      "version": "0.0.0",
+    },
+  },
+  "packages": {
+    "@chriscode/labs-template": ["@chriscode/labs-template@workspace:packages/template"],
+
+    "typescript": ["typescript@6.0.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw=="],
+  }
+}

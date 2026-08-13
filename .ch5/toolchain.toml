@@ -2,9 +2,9 @@ schemaVersion = 1
 
 [repo]
 id = "ch5-labs"
-kind = "node-lib"
+kind = "monorepo"
 packageManager = "bun"
-lockfiles = ["bun.lock", "package.json"]
+lockfiles = ["bun.lock", "package.json", "turbo.json"]
 
 [[verify]]
 name = "repository structure: package.json"
@@ -13,6 +13,10 @@ command = "test -f package.json"
 [[verify]]
 name = "no publishConfig.registry override (would hide packages from esm.sh)"
 command = "! grep -rl '\"registry\"' packages/*/package.json"
+
+[[verify]]
+name = "Turbo workspace graph"
+command = "bun run build --dry=json >/dev/null"
 
 [deps]
 install = "bun install"

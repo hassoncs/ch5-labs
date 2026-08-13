@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Oracle</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">ch5-labs / tiny-oracle</p>
+      <h1>Ask something unimportant.</h1>
+      <form>
+        <label for="question">Question</label>
+        <input id="question" required autocomplete="off" placeholder="Should I buy another keyboard?">
+        <button type="submit">Consult tiny oracle</button>
+      </form>
+      <output id="answer" aria-live="polite">The oracle is underqualified and ready.</output>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

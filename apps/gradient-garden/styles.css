@@ -1,0 +1,52 @@
+:root {
+  color: #fff;
+  font-family: ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
+  background: #17131f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  transition: background 500ms ease;
+}
+
+main {
+  width: min(42rem, calc(100% - 2rem));
+  padding: 3rem;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 2rem;
+  background: rgb(20 15 31 / 55%);
+  box-shadow: 0 2rem 6rem rgb(0 0 0 / 28%);
+  backdrop-filter: blur(24px);
+}
+
+.eyebrow {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+h1 {
+  margin: .5rem 0 1rem;
+  font-size: clamp(3rem, 10vw, 6rem);
+  line-height: .9;
+}
+
+#recipe {
+  min-height: 3rem;
+  font-family: ui-monospace, monospace;
+  overflow-wrap: anywhere;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: .9rem 1.2rem;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}

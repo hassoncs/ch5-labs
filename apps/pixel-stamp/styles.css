@@ -1,0 +1,61 @@
+:root {
+  font-family: ui-monospace, "SFMono-Regular", monospace;
+  color: #18181b;
+  background: #f4f0e8;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+main {
+  width: min(70rem, calc(100% - 2rem));
+  margin: 2rem auto;
+}
+
+header {
+  display: flex;
+  gap: 1rem;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+h1 {
+  margin: .2rem 0 0;
+  font: 900 clamp(2.5rem, 8vw, 5rem)/.9 system-ui, sans-serif;
+}
+
+.tools {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+button, input {
+  min-height: 2.75rem;
+  border: 2px solid currentColor;
+  border-radius: .75rem;
+  background: #fff;
+  font: inherit;
+}
+
+button { padding: 0 .9rem; cursor: pointer; }
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  margin-top: 2rem;
+  border: 3px solid #18181b;
+  background: #18181b;
+  gap: 1px;
+}
+
+.pixel {
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 0;
+  min-height: 0;
+  padding: 0;
+  background: #fff;
+}

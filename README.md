@@ -1,7 +1,31 @@
 # ch5-labs
 
-Tiny static TypeScript library experiments, published to **public npm** so they can be
-imported straight from [esm.sh](https://esm.sh) with no build step:
+CH5's junk drawer: a Bun + Turbo monorepo for small browser toys, odd utilities,
+and experiments that do not deserve their own repository.
+
+## Projects
+
+| Project | Kind | What it does |
+| --- | --- | --- |
+| `apps/gradient-garden` | app | Generates loud layered gradients. |
+| `apps/pixel-stamp` | app | Draws tiny pixel stamps in the browser. |
+| `apps/tiny-oracle` | app | Answers low-stakes questions with deterministic nonsense. |
+| `packages/random-kit` | library | Shared seeded-random helpers used by the apps. |
+| `packages/template` | template | Starting point for public npm + esm.sh experiments. |
+
+```bash
+bun install
+bun run check
+python3 -m http.server 4173 -d apps/gradient-garden/dist
+```
+
+Add private browser toys under `apps/*`. Add shared browser-safe code under
+`packages/*`. Turbo discovers each workspace from its `package.json` scripts.
+
+## Public npm experiments
+
+Packages that are ready for the outside world can be published to **public npm** so
+they can be imported straight from [esm.sh](https://esm.sh) with no build step:
 
 ```html
 <script type="module">
@@ -21,7 +45,7 @@ It cannot authenticate to a private registry, so anything on `npm.ch5.me` is inv
 to it. That is why `@ch5me/*` packages can never be served this way, and why these
 experiments use the public `@chriscode/*` scope.
 
-## Adding an experiment
+### Adding a publishable experiment
 
 ```bash
 cp -R packages/template packages/<name>
@@ -38,7 +62,7 @@ Constraints every package here has to hold:
 - **No `publishConfig.registry`.** See below.
 - Ship `dist` only; types come from `tsc`.
 
-## Publishing
+### Publishing
 
 ```bash
 bun run build
@@ -54,7 +78,7 @@ does not prove:
 3. the built module pulls in no `/node/*.mjs` shims — i.e. it really runs in a browser
 4. `x-typescript-types` is present, so consumers get `.d.ts`
 
-### The failure this repo is built to avoid
+#### The failure this repo is built to avoid
 
 `npm publish` reports success when it sends your package to the wrong registry. That
 already happened in `~/src/ch5/hush`: `hush-cli/package.json` sets
@@ -75,7 +99,7 @@ bun run scripts/verify-esm.ts @chriscode/hush@7.5.0
 It fails `browser-safe` — hush needs `child_process`, `fs`, and `readline`, so esm.sh
 serves it happily and no browser can run it.
 
-### esm.sh serves a different build per client
+#### esm.sh serves a different build per client
 
 esm.sh sends `vary: User-Agent`. A plain `fetch` gets the **node-target** build; a
 browser gets the `es2022` one. Only the browser build lists the `/node/*.mjs` shims, so

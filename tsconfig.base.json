@@ -17,6 +17,9 @@
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": true,
     "noUncheckedIndexedAccess": true,
-    "noEmitOnError": true
+    "noEmitOnError": true,
+    "paths": {
+      "@chriscode/random-kit": ["./packages/random-kit/src/index.ts"]
+    }
   }
 }

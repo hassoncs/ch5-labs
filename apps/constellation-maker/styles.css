@@ -1,0 +1,24 @@
+:root { color: #eef2ff; font-family: ui-monospace, monospace; background: #040713; }
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; overflow: hidden; }
+canvas { position: fixed; inset: 0; width: 100%; height: 100%; }
+main {
+  position: relative;
+  z-index: 1;
+  width: min(46rem, calc(100% - 2rem));
+  margin: 8vh auto;
+  padding: 2rem;
+  pointer-events: none;
+}
+p { letter-spacing: .14em; text-transform: uppercase; color: #9ca3c8; }
+h1 { max-width: 8ch; margin: 1rem 0; font: 900 clamp(4rem, 12vw, 8rem)/.82 system-ui, sans-serif; }
+button {
+  pointer-events: auto;
+  padding: .9rem 1.2rem;
+  border: 1px solid #9ca3c8;
+  border-radius: 999px;
+  color: inherit;
+  background: rgb(4 7 19 / 72%);
+  font: inherit;
+  cursor: pointer;
+}

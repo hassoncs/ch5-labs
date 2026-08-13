@@ -1,0 +1,18 @@
+:root { color: #171717; background: #ece9df; font-family: ui-monospace, monospace; }
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; padding: 2rem 1rem; }
+main { width: min(34rem, 100%); margin: auto; }
+.label { letter-spacing: .12em; text-transform: uppercase; }
+h1 { font: 900 clamp(3rem, 12vw, 6rem)/.85 system-ui, sans-serif; }
+form { display: grid; gap: .8rem; margin: 2rem 0; }
+label { display: grid; gap: .35rem; font-weight: 800; }
+input, button { border: 2px solid #171717; padding: .8rem; font: inherit; background: #fff; }
+button { font-weight: 900; cursor: pointer; }
+article {
+  padding: 2.2rem 1.5rem 3rem;
+  background: #fffef8;
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 15%);
+  clip-path: polygon(0 0,100% 0,100% 96%,97% 100%,94% 96%,91% 100%,88% 96%,85% 100%,82% 96%,79% 100%,76% 96%,73% 100%,70% 96%,67% 100%,64% 96%,61% 100%,58% 96%,55% 100%,52% 96%,49% 100%,46% 96%,43% 100%,40% 96%,37% 100%,34% 96%,31% 100%,28% 96%,25% 100%,22% 96%,19% 100%,16% 96%,13% 100%,10% 96%,7% 100%,4% 96%,0 100%);
+}
+article > p { text-align: center; font-size: .75rem; }
+pre { min-height: 8rem; white-space: pre-wrap; font: 1.15rem/1.65 Georgia, serif; }

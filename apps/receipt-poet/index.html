@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Poet</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main>
+      <p class="label">ch5-labs / receipt-poet</p>
+      <h1>Receipt Poet</h1>
+      <form>
+        <label>Thing <input id="item" required placeholder="oat milk"></label>
+        <label>Price <input id="price" required inputmode="decimal" placeholder="6.49"></label>
+        <button type="submit">Print poem</button>
+      </form>
+      <article id="receipt">
+        <p>YOUR SMALL COMMERCE POEM</p>
+        <hr>
+        <pre id="poem">waiting for purchase...</pre>
+        <hr>
+        <p>THANK YOU FOR FEELING SOMETHING</p>
+      </article>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

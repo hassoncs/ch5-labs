@@ -1,0 +1,13 @@
+id: ch5-labs
+version: 1
+project:
+  id: ch5-labs
+  name: ch5-labs
+  kind: monorepo
+  lifecycle: active
+  summary: Small browser toys, reusable experiments, and public npm prototypes that do not need their own repository.
+  tags:
+    - browser
+    - experiments
+    - typescript
+    - turbo

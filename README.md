@@ -8,8 +8,12 @@ and experiments that do not deserve their own repository.
 | Project | Kind | What it does |
 | --- | --- | --- |
 | `apps/gradient-garden` | app | Generates loud layered gradients. |
+| `apps/constellation-maker` | app | Draws a fresh procedural night sky. |
+| `apps/decision-wheel` | app | Spins through gloriously low-stakes choices. |
+| `apps/receipt-poet` | app | Converts ordinary purchases into tiny poems. |
 | `apps/pixel-stamp` | app | Draws tiny pixel stamps in the browser. |
 | `apps/tiny-oracle` | app | Answers low-stakes questions with deterministic nonsense. |
+| `packages/color-kit` | library | Browser-safe color conversion and contrast helpers. |
 | `packages/random-kit` | library | Shared seeded-random helpers used by the apps. |
 | `packages/template` | template | Starting point for public npm + esm.sh experiments. |
 

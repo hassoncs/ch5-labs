@@ -1,0 +1,15 @@
+{
+  "name": "@ch5-labs/decision-wheel",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@chriscode/color-kit": "workspace:*",
+    "@chriscode/random-kit": "workspace:*"
+  },
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp index.html styles.css dist/ && bun build src/main.ts --outdir dist --target browser --minify",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rm -rf dist"
+  }
+}

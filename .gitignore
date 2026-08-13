@@ -5,6 +5,9 @@ dist/
 *.tsbuildinfo
 .cache/
 .turbo/
+/.ch5/artifacts/
+/.ch5/timing/
+.turbo/
 
 # Hush materializes DECRYPTED secrets here at runtime. Two salvage branches in
 # ch5-company carried this path to origin on 2026-07-09 with seven live credentials

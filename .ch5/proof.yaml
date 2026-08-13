@@ -1,0 +1,5 @@
+version: 2
+commands:
+  fullTest: bun run check
+# Exact tests use CH5 built-in Vitest, Playwright, Node, or Bun adapters.
+proofs: []

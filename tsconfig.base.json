@@ -19,7 +19,8 @@
     "noUncheckedIndexedAccess": true,
     "noEmitOnError": true,
     "paths": {
-      "@chriscode/random-kit": ["./packages/random-kit/src/index.ts"]
+      "@chriscode/random-kit": ["./packages/random-kit/src/index.ts"],
+      "@chriscode/color-kit": ["./packages/color-kit/src/index.ts"]
     }
   }
 }

@@ -9,6 +9,21 @@
         "typescript": "^6.0.3",
       },
     },
+    "apps/constellation-maker": {
+      "name": "@ch5-labs/constellation-maker",
+      "version": "0.0.0",
+      "dependencies": {
+        "@chriscode/random-kit": "workspace:*",
+      },
+    },
+    "apps/decision-wheel": {
+      "name": "@ch5-labs/decision-wheel",
+      "version": "0.0.0",
+      "dependencies": {
+        "@chriscode/color-kit": "workspace:*",
+        "@chriscode/random-kit": "workspace:*",
+      },
+    },
     "apps/gradient-garden": {
       "name": "@ch5-labs/gradient-garden",
       "version": "0.0.0",
@@ -23,12 +38,23 @@
         "@chriscode/random-kit": "workspace:*",
       },
     },
+    "apps/receipt-poet": {
+      "name": "@ch5-labs/receipt-poet",
+      "version": "0.0.0",
+      "dependencies": {
+        "@chriscode/random-kit": "workspace:*",
+      },
+    },
     "apps/tiny-oracle": {
       "name": "@ch5-labs/tiny-oracle",
       "version": "0.0.0",
       "dependencies": {
         "@chriscode/random-kit": "workspace:*",
       },
+    },
+    "packages/color-kit": {
+      "name": "@chriscode/color-kit",
+      "version": "0.0.0",
     },
     "packages/random-kit": {
       "name": "@chriscode/random-kit",
@@ -40,11 +66,19 @@
     },
   },
   "packages": {
+    "@ch5-labs/constellation-maker": ["@ch5-labs/constellation-maker@workspace:apps/constellation-maker"],
+
+    "@ch5-labs/decision-wheel": ["@ch5-labs/decision-wheel@workspace:apps/decision-wheel"],
+
     "@ch5-labs/gradient-garden": ["@ch5-labs/gradient-garden@workspace:apps/gradient-garden"],
 
     "@ch5-labs/pixel-stamp": ["@ch5-labs/pixel-stamp@workspace:apps/pixel-stamp"],
 
+    "@ch5-labs/receipt-poet": ["@ch5-labs/receipt-poet@workspace:apps/receipt-poet"],
+
     "@ch5-labs/tiny-oracle": ["@ch5-labs/tiny-oracle@workspace:apps/tiny-oracle"],
+
+    "@chriscode/color-kit": ["@chriscode/color-kit@workspace:packages/color-kit"],
 
     "@chriscode/labs-template": ["@chriscode/labs-template@workspace:packages/template"],
 
